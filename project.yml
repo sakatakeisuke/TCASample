@@ -1,0 +1,27 @@
+name: TCASample
+
+options:
+  bundleIdPrefix: com.sakatakeisuke
+  deploymentTarget:
+    iOS: 14.0
+  xcodeversion: "14.3"
+  createIntermediateGroups: true
+  createProductStructure: false
+
+settings:
+  base:
+    MARKETING_VERSION: 1.0.0
+
+targets:
+  TCASample:
+    type: application
+    platform: iOS
+    sources:
+      - path: TCASample
+    info:
+      path: Info.plist
+      properties:
+        CFBundleVersion: "0"
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+
+      
