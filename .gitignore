@@ -1,1 +1,5 @@
+# project file
 *.xcodeproj
+
+# generated resources
+TCASample/Resources/Generated

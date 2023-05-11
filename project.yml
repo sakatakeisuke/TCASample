@@ -18,6 +18,10 @@ targets:
     platform: iOS
     sources:
       - path: TCASample
+      - path: TCASample/Resources/Generated/Assets.swift
+        optional: true
+      - path: TCASample/Resources/Generated/LocalizableStrings.swift
+        optional: true
     info:
       path: Info.plist
       properties:
@@ -25,9 +29,21 @@ targets:
         CFBundleShortVersionString: $(MARKETING_VERSION)
     dependencies:
       - package: TheComposableArchitecture
+        product: ComposableArchitecture
+    preBuildScripts:
+      - name: swiftgen
+        path: XCodeGen/Scripts/SwiftGen.sh
+        outputFiles:
+          - $(SRCROOT)/TCASample/Resources/Generated/Assets.swift
+          - $(SRCROOT)/TCASample/Resources/Generated/LocalizableStrings.swift
+
+schemes:
+  TCASample:
+    build:
+      targets:
+        TCASample: [analyze, run, archive]
 
 packages:
   TheComposableArchitecture:
     url: https://github.com/pointfreeco/swift-composable-architecture
     exactVersion: 0.52.0
-
