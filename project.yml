@@ -23,5 +23,11 @@ targets:
       properties:
         CFBundleVersion: "0"
         CFBundleShortVersionString: $(MARKETING_VERSION)
+    dependencies:
+      - package: TheComposableArchitecture
 
-      
+packages:
+  TheComposableArchitecture:
+    url: https://github.com/pointfreeco/swift-composable-architecture
+    exactVersion: 0.52.0
+
