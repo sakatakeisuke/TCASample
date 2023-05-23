@@ -1,0 +1,27 @@
+# .swiftlint.yml
+
+# ルールの設定
+disabled_rules:
+  # 無効化するルールを記述
+  - trailing_whitespace
+  - todo
+
+opt_in_rules:
+  # 有効化するルールを記述
+  - unused_optional_binding
+  - unused_closure_parameter
+
+included:
+# Lint対象にするファイル
+- TCASample/**/*.swift
+
+excluded:
+# Lint対象から外すファイル
+- TCASample/Resources/Generated/Assets.swift
+- TCASample/Resources/Generated/LocalizableStrings.swift
+
+# ルールごとの設定
+line_length:
+  # 1行の文字数の上限
+  warning: 120
+  error: 150

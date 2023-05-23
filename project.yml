@@ -36,6 +36,9 @@ targets:
         outputFiles:
           - $(SRCROOT)/TCASample/Resources/Generated/Assets.swift
           - $(SRCROOT)/TCASample/Resources/Generated/LocalizableStrings.swift
+      - name: swiftlint
+        path: XCodeGen/Scripts/SwiftLint.sh
+        basedOnDependencyAnalysis: false
 
 schemes:
   TCASample:
