@@ -27,6 +27,8 @@ targets:
       properties:
         CFBundleVersion: "0"
         CFBundleShortVersionString: $(MARKETING_VERSION)
+        UILaunchScreen:
+          UILaunchScreen: {}   # スプラッシュ作るようになったらこれを編集する？
     dependencies:
       - package: TheComposableArchitecture
         product: ComposableArchitecture
